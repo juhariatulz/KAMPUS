@@ -1,0 +1,143 @@
+*, *::before, *::after {
+    box-sizing: border-box; 
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f2f5;
+    padding-top: 60px; 
+    padding-bottom: 40px;
+}
+
+.navbar {
+    position: fixed; 
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #1e293b;
+    padding: 15px 20px;
+    text-align: center;
+    z-index: 1000;
+}
+
+.navbar a {
+    color: white;
+    text-decoration: none;
+    margin: 0 15px;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+.navbar a:hover {
+    color: #38bdf8;
+}
+
+.konten-utama {
+    max-width: 600px;
+    margin: 0 auto;
+    background: white;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.box {
+    width: 250px;
+    height: 100px;
+    padding: 20px;
+    border: 5px solid #2563eb;
+    margin-bottom: 15px;
+    color: white;
+    font-weight: bold;
+}
+
+.content-box {
+    box-sizing: content-box; 
+    background-color: #f43f5e;
+}
+
+.border-box {
+    box-sizing: border-box; 
+    background-color: #059669;
+}
+
+.kartu {
+    width: 320px;
+    margin: 0 auto;
+    background: white;
+    border-radius: 16px;
+    padding: 24px;
+    box-shadow: 0 4px 16px rgba(0,0,0,0.1);
+    position: relative; 
+    transition: all 0.3s ease; 
+}
+
+.kartu:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 24px rgba(0,0,0,0.2);
+}
+
+.badge {
+    position: absolute; 
+    top: 12px;
+    right: 16px;
+    background: #E8622D;
+    color: white;
+    padding: 4px 12px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+.foto {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%; 
+    background: #CBD5E1;
+    margin-bottom: 12px;
+}
+
+.nama {
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 4px;
+}
+
+.peran {
+    color: #64748B;
+    font-size: 14px;
+    margin-bottom: 16px;
+}
+
+.tombol {
+    display: inline-block;
+    padding: 10px 20px;
+    background: #2563EB;
+    color: white;
+    text-decoration: none;
+    border-radius: 8px;
+    font-size: 14px;
+}
+
+.tombol:hover {
+    background: #1D4ED8;
+}
+
+.sub-judul-sticky {
+    position: sticky; 
+    top: 55px;
+    background-color: #e2e8f0;
+    padding: 10px 15px;
+    border-radius: 6px;
+    font-size: 18px;
+    color: #1e293b;
+    z-index: 100;
+}
+
+p {
+    margin: 15px 0;
+    color: #475569;
+    line-height: 1.6;
+}

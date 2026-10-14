@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulir Pendaftaran - Latihan Terbimbing</title>
+</head>
+<body>
+
+    <header>
+        <h1>Sistem Informasi Akademik</h1>
+        <nav>
+            <a href="jadwal.html">Jadwal Kuliah</a> | 
+            <a href="daftar.html">Formulir Pendaftaran</a>
+        </nav>
+    </header>
+
+    <main>
+        <section>
+            <h2>Formulir Pendaftaran Mahasiswa</h2>
+            
+            <form action="#" method="POST">
+                
+                <!-- Nama dengan validasi minimal karakter & required -->
+                <p>
+                    <label for="nama">Nama Lengkap:</label><br>
+                    <input type="text" id="nama" name="nama" minlength="3" placeholder="Minimal 3 karakter" required>
+                </p>
+
+                <!-- Email dengan validasi bawaan -->
+                <p>
+                    <label for="email">Alamat Email:</label><br>
+                    <input type="email" id="email" name="email" placeholder="contoh@domain.com" required>
+                </p>
+
+                <!-- Tanggal Lahir -->
+                <p>
+                    <label for="lahir">Tanggal Lahir:</label><br>
+                    <input type="date" id="lahir" name="tanggal_lahir" required>
+                </p>
+
+                <!-- Jenis Kelamin (Radio dalam Fieldset & Legend) -->
+                <fieldset>
+                    <legend>Jenis Kelamin</legend>
+                    <input type="radio" id="l" name="jk" value="Laki-laki" required>
+                    <label for="l">Laki-laki</label><br>
+                    <input type="radio" id="p" name="jk" value="Perempuan">
+                    <label for="p">Perempuan</label>
+                </fieldset>
+
+                <br>
+
+                <!-- Program Studi (Select Dropdown) -->
+                <p>
+                    <label for="prodi">Program Studi:</label><br>
+                    <select id="prodi" name="prodi" required>
+                        <option value="">-- Pilih Program Studi --</option>
+                        <option value="ti">Teknik Informatika</option>
+                        <option value="si">Sistem Informasi</option>
+                    </select>
+                </p>
+
+                <!-- Minat (Checkbox) -->
+                <fieldset>
+                    <legend>Bidang Minat</legend>
+                    <input type="checkbox" id="m1" name="minat" value="web">
+                    <label for="m1">Pengembangan Web</label><br>
+                    <input type="checkbox" id="m2" name="minat" value="ai">
+                    <label for="m2">Kecerdasan Buatan (AI)</label>
+                </fieldset>
+
+                <br>
+
+                <!-- Alasan (Textarea) -->
+                <p>
+                    <label for="alasan">Alasan Memilih Prodi:</label><br>
+                    <textarea id="alasan" name="alasan" rows="4" cols="40" placeholder="Tuliskan alasan Anda..." required></textarea>
+                </p>
+
+                <!-- Tombol Submit -->
+                <p>
+                    <button type="submit">Kirim Data</button>
+                </p>
+
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Pemrograman Web 1 - FTI UNISKA MAB</p>
+    </footer>
+
+</body>
+</html>

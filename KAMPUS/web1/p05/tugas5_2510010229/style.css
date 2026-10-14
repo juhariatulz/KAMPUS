@@ -1,0 +1,209 @@
+/* ==========================================================
+   1. RESET & BOX-SIZING (Wajib box-sizing: border-box)
+   ========================================================== */
+*, *::before, *::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #f8fafc;
+    color: #334155;
+    /* Kompensasi padding atas agar konten tidak tertutup navbar fixed */
+    padding-top: 80px; 
+}
+
+/* ==========================================================
+   2. NAVBAR POSITION: FIXED
+   ========================================================== */
+.navbar-fixed {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #0f172a;
+    color: #ffffff;
+    padding: 18px 30px;
+    z-index: 1000;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+}
+
+.nav-container {
+    max-width: 1100px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo-toko {
+    font-weight: 700;
+    font-size: 20px;
+    letter-spacing: 0.5px;
+    color: #f43f5e;
+}
+
+.nav-menu a {
+    color: #94a3b8;
+    text-decoration: none;
+    margin-left: 25px;
+    font-weight: 600;
+    font-size: 14px;
+    transition: color 0.3s ease;
+}
+
+.nav-menu a:hover {
+    color: #ffffff;
+}
+
+/* ==========================================================
+   3. ELEMEN POSITION: STICKY
+   ========================================================== */
+.halaman-utama {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.kategori-sticky {
+    position: sticky;
+    top: 70px; /* Menempel tepat di bawah navbar fixed saat halaman di-scroll */
+    background-color: #e2e8f0;
+    padding: 15px 25px;
+    margin-bottom: 30px;
+    border-radius: 8px;
+    z-index: 900;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+    text-align: center;
+}
+
+.kategori-sticky h2 {
+    color: #1e293b;
+    font-size: 20px;
+    font-weight: 600;
+}
+
+/* ==========================================================
+   4. LAYOUT KARTU PRODUK (Display: Inline-Block)
+   ========================================================== */
+.grid-produk {
+    text-align: center; /* Merapikan susunan inline-block */
+}
+
+.kartu-produk {
+    display: inline-block;
+    width: 250px;
+    background: #ffffff;
+    border-radius: 12px;
+    padding: 16px;
+    margin: 15px;
+    text-align: left;
+    position: relative; /* Jangkar wajib untuk badge absolute di dalam kartu */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    transition: all 0.3s ease; /* Transisi halus untuk hover effect */
+}
+
+/* Hover Effect: Kartu sedikit terangkat dan bayangan menebal */
+.kartu-produk:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 10px 24px rgba(0, 0, 0, 0.15);
+}
+
+/* ==========================================================
+   5. BADGE POSITION: ABSOLUTE
+   ========================================================== */
+.badge {
+    position: absolute;
+    top: 12px;
+    right: 12px;
+    color: white;
+    font-size: 11px;
+    font-weight: bold;
+    padding: 4px 10px;
+    border-radius: 20px;
+    z-index: 10;
+}
+
+.badge-diskon {
+    background-color: #e11d48;
+}
+
+.badge-baru {
+    background-color: #2563eb;
+}
+
+.badge-favorit {
+    background-color: #059669;
+}
+
+/* ==========================================================
+   6. OVERFLOW: HIDDEN & BORDER-RADIUS (Gambar Membulat)
+   ========================================================== */
+.wadah-gambar {
+    width: 100%;
+    height: 150px;
+    overflow: hidden; /* Memotong bagian gambar yang meluber keluar batas */
+    border-radius: 8px; /* Sudut membulat pada area gambar */
+    margin-bottom: 14px;
+}
+
+.wadah-gambar img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+/* Efek zoom halus pada gambar saat kartu di-hover */
+.kartu-produk:hover .wadah-gambar img {
+    transform: scale(1.08);
+}
+
+/* ==========================================================
+   7. DETAIL PRODUK & TOMBOL BELI
+   ========================================================== */
+.info-produk h3 {
+    font-size: 16px;
+    color: #1e293b;
+    margin-bottom: 6px;
+    font-weight: 600;
+}
+
+.harga-produk {
+    font-weight: 700;
+    color: #059669;
+    font-size: 15px;
+    margin-bottom: 14px;
+}
+
+.tombol-beli {
+    display: inline-block;
+    width: 100%;
+    text-align: center;
+    background-color: #2563eb;
+    color: white;
+    text-decoration: none;
+    padding: 9px 0;
+    border-radius: 6px;
+    font-size: 14px;
+    font-weight: 600;
+    transition: background-color 0.3s ease;
+}
+
+.tombol-beli:hover {
+    background-color: #1d4ed8;
+}
+
+/* ==========================================================
+   8. FOOTER TOKO
+   ========================================================== */
+.footer-toko {
+    text-align: center;
+    padding: 25px;
+    background-color: #0f172a;
+    color: #94a3b8;
+    font-size: 14px;
+    margin-top: 50px;
+}

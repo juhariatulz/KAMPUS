@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Latihan Terbimbing - CSS Box Model & Position</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <nav class="navbar">
+        <a href="#beranda">Beranda</a>
+        <a href="#profil">Profil Saya</a>
+        <a href="#konten">Daftar Materi</a>
+    </nav>
+
+    <main class="konten-utama" id="beranda">
+        
+        <section>
+            <h2>Eksperimen Box Model</h2>
+            <div class="box content-box">
+                Box 1: content-box (default)
+            </div>
+            <div class="box border-box">
+                Box 2: border-box
+            </div>
+        </section>
+
+        <hr style="margin: 40px 0;">
+
+        <section id="profil">
+            <h2>Kartu Profil</h2>
+            <div class="kartu">
+                <span class="badge">Admin</span>
+                <div class="foto"></div>
+                <div class="nama">Juhariatul Zahra</div>
+                <div class="peran">Mahasiswa Teknik Informatika</div>
+                <a class="tombol" href="#">Hubungi</a>
+            </div>
+        </section>
+
+        <hr style="margin: 40px 0;">
+
+        <section id="konten">
+            <h2 class="sub-judul-sticky">Daftar Paragraf (Uji Sticky &amp; Scroll)</h2>
+            
+            <p>1. Ini adalah paragraf pertama untuk menguji efek guliran halaman.</p>
+            <p>2. Perhatikan bagaimana sub-judul di atas akan menempel (sticky) saat digulir ke atas[cite: 27].</p>
+            <p>3. Box-sizing membantu kita mengatur lebar elemen tanpa khawatir padding meluber keluar.</p>
+            <p>4. Position fixed membuat navbar selalu berada di atas layar[cite: 27].</p>
+            <p>5. Position absolute membuat badge menempel pada kartu yang berposisi relative[cite: 27].</p>
+            <p>6. Overflow hidden berguna untuk memotong bagian yang keluar dari wadah.</p>
+            <p>7. Border-radius memperindah sudut kotak.</p>
+            <p>8. Box-shadow memberikan efek bayangan melayang.</p>
+            <p>9. Transisi membuat perubahan hover menjadi lebih halus.</p>
+            <p>10. Latihan terbimbing ini mencakup seluruh poin inti modul Pertemuan 5.</p>
+        </section>
+
+    </main>
+
+</body>
+</html>
